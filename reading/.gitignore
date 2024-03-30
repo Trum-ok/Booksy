@@ -32,3 +32,5 @@ node_modules
 pytest/*
 pytest
 */pytest
+*.cer
+.cer

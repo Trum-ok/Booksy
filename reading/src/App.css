@@ -1,8 +1,64 @@
+@font-face {
+  font-family: 'KazukiReiwa';
+  src: url('../src/assets/fonts/subset-KazukiReiwa-Regular.woff2') format('woff2'),
+      url('../src/assets/fonts/subset-KazukiReiwa-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'KazukiReiwa';
+  src: url('../src/assets/fonts/subset-KazukiReiwa-Light.woff2') format('woff2'),
+      url('../src/assets/fonts/subset-KazukiReiwa-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'KazukiReiwa';
+  src: url('../src/assets/fonts/subset-KazukiReiwa-Bold.woff2') format('woff2'),
+      url('../src/assets/fonts/subset-KazukiReiwa-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+:root {
+  --primary-100: #3A405A;
+  --primary-200: #656b87;
+  --primary-300: #c4c9e9;
+  --accent-100: #F28482;
+  --accent-200: #88262d;
+  --text-100: #1E1E24;
+  --text-200: #45454c;
+  --bg-100: #fff8f1;
+  --bg-200: #efeeed;
+  --bg-300: #c6c5c4;
+}
+
+
 #root {
-  max-width: 1280px;
+  /* max-width: 1280px; */
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+
+}
+
+body {
+  background-color: var(--bg-100);
+}
+
+h1 {
+  font-family: 'KazukiReiwa';
+  color: var(--text-100);
+}
+
+span {
+  color: var(--text-200);
 }
 
 .logo {
@@ -16,27 +72,4 @@
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }

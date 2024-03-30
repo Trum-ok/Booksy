@@ -1,37 +1,38 @@
 import { useState, useEffect } from 'react'
-import axios from 'axios'
-
-
-
-
+import axios, { AxiosResponse } from 'axios';
+import { v4 as uuidv4 } from 'uuid'
 
 
 function testty() {
+  const [responseData, setResponseData] = useState<any>({});
 
-  const url = 'https://ngw.devices.sberbank.ru:9443/api/v2/oauth';
-  const payload = { scope: 'GIGACHAT_API_PERS' };
-  const headers = {
-    'Content-Type': 'application/x-www-form-urlencoded',
-    'Accept': 'application/json',
-    'RqUID': 'b2ef8576-6bbe-4c79-87a1-2ec8b7d6aa02',
-    'Authorization': 'Basic <авторизацонные_данные>'
+  const fetchData = async () => {
+    const config = {
+      method: 'post',
+      url: 'https://ngw.devices.sberbank.ru:9443/api/v2/oauth',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'Accept': 'application/json',
+        'RqUID': uuidv4(), 
+        'Authorization': 'Basic NDQ3MDE5YzItOTBkNS00NjE2LWI3ZWYtNTA0YmRhMGRiMDBmOjY0MDE1ZTU3LTEwZWItNGUwMi1hNjZhLWQyZDdhNDdiMGU0OQ=='
+      },
+      data: {scope: 'GIGACHAT_API_PERS' }
+    };
+
+    try {
+      const response: AxiosResponse = await axios(config);
+      setResponseData(response.data);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
-  // Выполняем POST-запрос с использованием axios
-  axios.post(url, payload, { headers })
-    .then(response => {
-      console.log(response.data); // Выводим полученные данные
-    })
-    .catch(error => {
-      console.error(error); // В случае ошибки выводим сообщение об ошибке
-    });
-
   return (
-    <>
-      <div>test_from</div>
-      <p>test_form</p>
-    </>
-  )
+    <div>
+      <button onClick={fetchData}>Fetch Data</button>
+      {JSON.stringify(responseData)}
+    </div>
+  );
 }
 
 export default testty
