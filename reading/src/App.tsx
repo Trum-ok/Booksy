@@ -36,7 +36,6 @@ function App() {
         <Testty />
         <InputForm onSubmit={onSubmit} />
       </div>
-      <hr />
       <Footer />
       <ToastContainer position='bottom-right' />
     </>

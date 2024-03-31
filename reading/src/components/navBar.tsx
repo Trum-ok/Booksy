@@ -1,5 +1,6 @@
 import BookMate from '../assets/bookmate.svg'
 import Search from '../assets/search.svg'
+import Ylw from '../assets/ylw.jpg'
 
 
 function NavBar() {
@@ -10,9 +11,13 @@ function NavBar() {
           <a href=''><div className="logoContainer"><img src={BookMate} alt="logo" /></div></a>
         </div>
         <div className="navLinks">
-          <a href="/">Главная</a>
-          <a href="/about">Мои книги</a>
-          <a href="/search" title='Поиск'><img src={Search} alt="поиск" /></a>
+          <div className="navLinksContainer">
+            <a href="/">Главная</a>
+            <a href="/about">Мои книги</a>
+            <a href="/search" title='Поиск'>
+              <img src={Search} alt="поиск" />
+            </a>
+          </div>
         </div>
         <div className="controls">
           <button>
@@ -20,7 +25,9 @@ function NavBar() {
           </button>
           <div className="avatarContainer">
             <button>
-              <img src="" alt="avatar" />
+              <div className="avatar">
+                <img src={Ylw} alt="avatar" />
+              </div>
             </button>
           </div>
         </div>
