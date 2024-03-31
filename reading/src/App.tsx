@@ -9,6 +9,7 @@ import InputForm from './components/input'
 // import { v4 } from 'uuid'
 import Footer from './components/footer'
 import MainPromo from './components/mainPromo'
+import NavBar from './components/navBar';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -25,6 +26,7 @@ function App() {
 
   return (
     <>
+      <NavBar />
       <MainPromo />
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>

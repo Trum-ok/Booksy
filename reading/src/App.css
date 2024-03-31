@@ -34,6 +34,7 @@
   --accent-200: #88262d;
   --text-100: #1E1E24;
   --text-200: #45454c;
+  --text-300: #7a7a7a;
   --bg-100: #fff8f1;
   --bg-200: #efeeed;
   --bg-300: #c6c5c4;
@@ -61,6 +62,16 @@ span {
   color: var(--text-200);
 }
 
+a {
+  color: var(--text-200);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -72,4 +83,53 @@ span {
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+header {
+  display: flex;
+  position: relative;
+  height: 64px;
+  padding: 0 16px;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  z-index: 900;
+  background-color: #fff;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.logoContainer img {
+  width: 32px;
+  height: 32px;
+}
+
+.mainPromo img {
+  width: 100px;
+  height: 100px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  color: var(--text-300);
+  font-weight: 100;
+}
+
+.footerLinks {
+  display: flex;
+  gap: 12px 36px;
+  flex-wrap: wrap;
+}
+
+.footerSocials {
+  display: flex;
+  gap: 12px;
+}
+
+footer a {
+  font-weight: 100;
+  color: var(--text-300)
 }

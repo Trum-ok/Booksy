@@ -22,12 +22,13 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-.pytest
 .env
 .venv
 venv
 node_modules/*
 node_modules
+node_modules/
+/node_modules
 */node_modules
 pytest/*
 pytest
