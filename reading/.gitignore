@@ -34,3 +34,8 @@ pytest
 */pytest
 *.cer
 .cer
+.node_modules
+.vite
+vite
+/vite/*
+vite/*
