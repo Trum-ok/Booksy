@@ -12,7 +12,7 @@ function NavBar() {
     setCurrentPage(window.location.pathname);
   }, []);
 
-  const makeActive = (path) => {
+  const makeActive = (path: string) => {
     return currentPage === path ? 'active' : '';
   };
 
@@ -32,11 +32,11 @@ function NavBar() {
           </div>
         </div>
         <div className="controls">
-          <button>
-            <span>text</span>
+          <button className='promoButton'>
+            Оформить подписку
           </button>
           <div className="avatarContainer">
-            <button>
+            <button className='avatarButton'>
               <div className="avatar">
                 <img src={Ylw} alt="avatar" />
               </div>
