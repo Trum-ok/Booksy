@@ -211,10 +211,27 @@ header {
 }
 
 .chat {
+  padding: 16px;
   background-color: var(--bg-300);
-  border-radius: 10%;
-  
+  border-radius: 10px;
+  min-height: 480px;
 }
+
+.inputFormContainer {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: ; */
+}
+
+.inputFormContainer input {
+  border: 1px solid red;
+  border-radius: 5px;
+}
+
+/* .inputFormContainer input:hover, .inputFormContainer input:active {
+  border: 1 px solid var(--primary-200);
+} */
+
 
 footer {
   padding-top: 220px;

@@ -103,7 +103,7 @@ function Chat() {
         <span>GigaChat is typing...</span>
         <span>{typingText}</span>
       </div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className='inputFormContainer'>
         <input
           type="text"
           value={input}
@@ -111,6 +111,7 @@ function Chat() {
           onKeyPress={handleKeyPress}
           placeholder="Опишите книгу, которую Вы хотите"
           enterKeyHint='send'
+          className='inputForm'
         />
         <button type="submit" title='Отправить'>
             <img src={PlaneIcon} alt="Submit Icon" />

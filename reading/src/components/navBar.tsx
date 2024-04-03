@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import BookMate from '../assets/bookmate.svg'
-import Srch from '../assets/search.svg'
 import Ylw from '../assets/ylw.jpg'
 import SearchIcon from '../assets/icons/searchIcon';
 
@@ -28,7 +27,7 @@ function NavBar() {
             <a href="/" className={`navLink ${makeActive('/')}`}>Главная</a>
             <a href="/about" className={`navLink ${makeActive('/about')}`}>Мои книги</a>
             <a href="/search" title='Поиск' className={`navLink ${makeActive('/search')}`}>
-              <SearchIcon width={32} height={32} fill='black' classn='searchIcon' />
+              <SearchIcon width={22} height={22} fill='black' classn='searchIcon' />
             </a>
           </div>
         </div>
