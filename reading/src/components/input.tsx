@@ -3,7 +3,7 @@ import PlaneIcon from '../assets/plane.svg';
 // import './InputForm.css'; // Импорт стилей для компонента
 
 interface InputFormProps {
-  onSubmit: (query: string) => void; // Пропс для обработки события отправки формы
+  onSubmit: (query: string) => void;
 }
 
 const InputForm: React.FC<InputFormProps> = ({ onSubmit }) => {

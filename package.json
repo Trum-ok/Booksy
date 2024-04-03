@@ -3,11 +3,14 @@
     "agent-base": "^7.1.1",
     "axios": "^1.6.8",
     "gigachat-node": "^2.1.2",
+    "handy-svg": "^1.0.8",
     "install": "^0.13.0",
     "qs": "^6.12.0",
+    "react-router-dom": "^6.22.3",
     "react-toastify": "^10.0.5",
     "stream-browserify": "^3.0.0",
-    "uuid": "^9.0.1"
+    "uuid": "^9.0.1",
+    "vite-plugin-svgr": "^4.2.0"
   },
   "devDependencies": {
     "dotenv": "^16.4.5",

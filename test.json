@@ -1,0 +1,20 @@
+{
+    "model": "GigaChat",
+    "messages": [
+          {
+              "role": "system",
+              "content": "Отвечай как научный сотрудник"
+          },
+          {
+              "role": "user",
+              "content": "Напиши 5 вариантов названий для космической станции"
+          }
+    ],
+    "temperature": 1,
+    "top_p": 0.1,
+    "n": 1,
+    "stream": false,
+    "max_tokens": 512,
+    "repetition_penalty": 1,
+    "update_interval": 0
+  }

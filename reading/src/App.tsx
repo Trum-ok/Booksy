@@ -1,44 +1,26 @@
-import { useState } from 'react'
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
-import reactLogo from './assets/react.svg'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
 import './App.css'
-import Testty from './components/test_form'
-import InputForm from './components/input'
-// import { v4 } from 'uuid'
-import Footer from './components/footer'
-import MainPromo from './components/mainPromo'
+import Home from './pages/index';
+import Search from './pages/search';
+import NotFound from './pages/404';
 import NavBar from './components/navBar';
 
+
 function App() {
-  const [count, setCount] = useState(0)
-
-  const onSubmit = (query: string) => {
-    if (query === '') {
-      toast.error('Введите данные')
-    } else {
-      console.log(`Вы отправили: ${query}`);
-      // запрос к api
-    }
-    // Здесь может быть ваш код для обработки отправленного запроса
-  };
-
   return (
-    <>
-      <NavBar />
-      <MainPromo />
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-
-        <Testty />
-        <InputForm onSubmit={onSubmit} />
-      </div>
-      <Footer />
-      <ToastContainer position='bottom-right' />
-    </>
+      
+      <Router>
+        <NavBar />
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/search" element={<Search />} />
+            <Route path="*" element={<NotFound />} /> 
+        </Routes>
+      </Router>
   )
 }
 
